@@ -1,0 +1,315 @@
+<template>
+    
+    <lightning-card title="Novo Grupo Garantidor">
+
+        <p slot="footer">
+            <lightning-button variant="brand" label="Definir/Alterar" title="Successful action" onclick={openModal} name="openConfirmation" class="slds-m-left_x-small"></lightning-button>
+        </p>
+        </lightning-card>
+
+        <template if:true={isModalOpen}>
+    
+            <lightning-card  > 
+                <div class="slds-container_small">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open" >
+                        
+                        
+                        <div class="slds-modal__container" if:true={ListaGrupoCriados}> 
+                            <header class="slds-modal__header headerCriarGrupo" >
+                                <div  class="Titulo"  >
+                                    <div class="c-container" >
+                                        <lightning-layout>
+        
+                                            <lightning-layout-item flexibility="auto, no-grow"  padding="around-small" class="iconTitulo" >
+                                                <div class="header-column">
+                                                    <lightning-icon icon-name="utility:adduser" alternative-text="Utility image" title="Image"></lightning-icon>
+                                                </div>
+                                            </lightning-layout-item>
+        
+                                            <lightning-layout-item class="blocoTextoTitulo" flexibility="auto" padding="around-small">
+                                                    <h2  class="slds-text-heading_medium slds-hyphenate textoTitulo">
+                                                        Novo Grupo Garantidor
+                                                    </h2>
+                                            </lightning-layout-item>
+        
+                                        </lightning-layout>
+                                    </div>
+                                </div>
+                            </header>
+        
+                            <div class="listaGrupo" >
+                                <div class="slds-modal__content slds-p-around_medium listaGrupoBody">
+        
+                                    <div class="c-container"  >
+                                        <lightning-layout>
+                                            <lightning-layout-item class="TitulolistaGrupo" padding="around-small" >
+                                                <p class=" textoTitulolistaGrupo field-title"  >
+                                                    Grupo 1
+                                                </p>
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                    </div>
+        
+                                    <div class="c-container" >
+                                        <lightning-layout>
+        
+                                            <lightning-layout-item padding="around-small" size="3" class="descricaoGrupoGarantidorC1" >
+                                                    <p>Nome</p>
+                                                    <p>CPF/CNPJ</p>
+                                                    <p>Proporção</p>
+                                                    <p>Regime de Casamento</p>
+                                                    <p>Rating?</p>
+                                                    <p>Obrigatório?</p>
+                                            </lightning-layout-item>
+        
+                                            <lightning-layout-item padding="around-small" size="7" class="descricaoGrupoGarantidorC2">
+                                                    <p>001244_PF_THALITA_REBOUCAS</p>
+                                                    <p>166.933.320-56</p>
+                                                    <p>Não informado</p>
+                                                    <p>100%</p>
+                                                    <p>Não informado</p>
+                                                    <p>Sim</p>
+                                                    <p>Sim</p>
+                                            </lightning-layout-item>
+        
+        
+                                            <lightning-layout-item class="listaGrupoAcoes" size="2"  padding="around-small" >
+                                                    <lightning-input type="checkbox" checked="true" ></lightning-input> 
+                                                    <lightning-icon icon-name="utility:delete" size="x-small" alternative-text="Delete" title="Delete"></lightning-icon>
+                                            </lightning-layout-item>
+        
+                                        </lightning-layout>
+                                    </div>
+                                    
+                                </div>
+                            </div>  
+        
+                            <footer class="slds-modal__footer footerListaGrupo" >
+                                
+                                <div class="c-container" aria-setsize="12">
+                                    <lightning-layout>
+        
+                                        <lightning-layout-item class="buttonNovoGrupoGarantidor" padding="around-small"  size="8" >
+                                            <lightning-button variant="Neutral"
+                                                            name="Novo Grupo Garantidor"
+                                                            label='Novo Grupo Garantidor'
+                                                            onclick={closeModal}
+                                                            class="noBtn"
+                                            ></lightning-button>
+                                        </lightning-layout-item>
+        
+                                        <lightning-layout-item padding="around-small" class="button" >
+                                            <lightning-button variant="Neutral"
+                                                            name="cancel"
+                                                            label='Cancelar'
+                                                            onclick={closeModal}
+                                                            class="noBtn" >
+                                            </lightning-button>
+                                        </lightning-layout-item>
+        
+                                        <lightning-layout-item padding="around-small" class="button">
+                                            <lightning-button variant="brand"
+                                                            name="confirm"
+                                                            label="Salvar"
+                                                            title='Salvar'
+                                                            onclick={closeModal} 
+                                                            class="noBtn noBtn3"
+                                            ></lightning-button>
+                                        </lightning-layout-item>
+        
+                                    </lightning-layout>
+                                </div>
+                            </footer>
+                        </div>
+        
+                        <div class="slds-modal__container"  if:true={criarGrupos}> 
+        
+                            <header class="slds-modal__header headerCriarGrupo" >
+                                <div  class="Titulo"  >
+                                    <div class="c-container" >
+                                        <lightning-layout>
+        
+                                            <lightning-layout-item flexibility="auto, no-grow"  padding="around-small" class="iconTitulo" >
+                                                <div class="header-column">
+                                                    <lightning-icon icon-name="utility:adduser" alternative-text="Utility image" title="Image"></lightning-icon>
+                                                </div>
+                                            </lightning-layout-item>
+        
+                                            <lightning-layout-item class="blocoTextoTitulo" flexibility="auto" padding="around-small">
+                                                    <h2  class="slds-text-heading_medium slds-hyphenate textoTitulo">
+                                                        Novo Grupo Garantidor
+                                                    </h2>
+                                            </lightning-layout-item>
+        
+                                        </lightning-layout>
+                                    </div>
+                                </div>
+                            </header>
+        
+                            <div class="main">
+                                <div class="slds-modal__content slds-p-around_medium mainBody"  >
+        
+                                    <div class="c-container">
+                                        <lightning-layout>
+        
+                                            <lightning-layout-item flexibility="auto" class=" slds-p-left_none slds-p-right_none inputNomeGrupo"  padding="around-small" size="11" >
+                                                    <lightning-input type="text" label="Nome do Grupo" value={textValue}  ></lightning-input>
+                                            </lightning-layout-item>
+        
+                                            <lightning-layout-item class="slds-m-top_large slds-p-left_none addGrupo " flexibility="auto" padding="around-small " size="1" >
+                                                    <button class="slds-button slds-button_neutral buttonAddGrupo " > +</button>
+                                            </lightning-layout-item>
+        
+                                        </lightning-layout>
+                                    </div>
+                                    
+                                    <div class="c-container"  >
+                                        <lightning-layout>
+                                            <lightning-layout-item flexibility="auto" class="slds-p-left_none slds-p-right_none">
+                                                    <lightning-combobox class="comboboxAvalista"
+                                                                        name="progress"
+                                                                        label="Avalista"
+                                                                        placeholder="Selecione o Avalista..."
+                                                                        options={options}
+                                                                        onchange={handleChange}
+                                                                        >
+                                                    </lightning-combobox>
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                    </div> 
+        
+                                    <div class="c-container"   >
+                                        <lightning-layout>
+        
+                                            <lightning-layout-item padding="around-small" class="slds-p-left_none" size="5" >
+                                                    <lightning-input type="number" name="input6" label="Proporção" value="0.5" formatter="percent" step="0.01" ></lightning-input>
+                                            </lightning-layout-item>
+                                            
+                                            <lightning-layout-item padding="around-small" size="2" >
+                                                    <div class="slds-form-element slds-m-top_x-large slds-m-left_large" >
+                                                        <label class="slds-checkbox_toggle slds-grid">
+                                                            <span class="slds-form-element__label slds-m-bottom_none">Rating</span>
+                                                            <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16" aria-describedby="checkbox-toggle-16" />
+                                                            <span  class="slds-checkbox_faux_container" aria-live="assertive">
+                                                                <span class="slds-checkbox_faux"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                            </lightning-layout-item>
+                                                
+                                            <lightning-layout-item padding="around-small" size="5" >
+                                                    <div class="slds-form-element slds-m-top_x-large slds-m-left_xx-large">
+                                                        <label class="slds-checkbox_toggle slds-grid">
+                                                        <span class="slds-form-element__label slds-m-bottom_none">Obrigatório</span>
+                                                        <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16" aria-describedby="checkbox-toggle-16" onchange={changeToggle} checked={checked} />
+                                                        <span class="slds-checkbox_faux_container" aria-live="assertive">
+                                                            <span class="slds-checkbox_faux"></span>
+                                                        </span>
+                                                        </label>
+                                                    </div>
+                                            </lightning-layout-item>
+        
+                                        </lightning-layout>
+                                    </div>
+        
+                                    <div class="c-container" >
+                                        <lightning-layout>
+                            
+                                            <lightning-layout-item flexibility="auto" class=" slds-p-left_none slds-p-right_none textoQuantOper" padding="around-small" size="5">
+                                                <p> Quantidade mínima que assinam a operação </p>
+                                            </lightning-layout-item>
+                            
+                                            <lightning-layout-item class="slds-p-left_none valorQuantOper" flexibility="auto, no-grow" padding="around-small" size="2">
+                                                    <lightning-input type="number" class="textoValorQuantOper" ></lightning-input>
+                                            </lightning-layout-item>
+                            
+                                        </lightning-layout>
+                                    </div>
+        
+                                    <div if:true={mostraGrupos}>
+        
+                                        <div class="c-container"  >
+                                            <lightning-layout>
+                                                <lightning-layout-item flexibility="auto" class=" slds-p-left_none slds-p-right_none tituloGrupo"  padding="around-small" >
+                                                    <h1> Grupo - Grupo 1 </h1>
+                                                </lightning-layout-item>
+                                            </lightning-layout>
+                                        </div>
+        
+                                        <div class="c-container slds-scrollable_x containerDatatable" >
+                                            <lightning-layout >
+                                                <lightning-layout-item flexibility="auto" class=" slds-p-left_none slds-p-right_none datable" padding="around-small" >
+                                                    <lightning-datatable
+                                                                        key-field="Id"
+                                                                        data={accounts.data}
+                                                                        columns={columns}
+                                                                        hide-checkbox-column="disabled"
+                                                                        column-widths-mode="auto"
+                                                                        onrowaction={handleRowActions} >
+                                                    </lightning-datatable>
+                                                </lightning-layout-item>
+                                            </lightning-layout>
+                                        </div>
+                                    </div>
+        
+                                    <div class="c-container"  >
+                                        <lightning-layout>
+                                            
+                                            <lightning-layout-item class="slds-p-left_none cancelarGrupoGarantidor" flexibility="auto" padding="around-small " size="9" >
+                                                    <lightning-button   class="noBtn"
+                                                                        variant="Neutral"
+                                                                        name="cancel"
+                                                                        label='Cancelar'
+                                                                        title='Cancelar'
+                                                                        onclick={closeModal}
+                                                                    >
+                                                    </lightning-button>
+                                            </lightning-layout-item>
+                                            
+                                            <lightning-layout-item class="slds-p-left_none salvarGrupoGarantidor" flexibility="auto" size="3"  >
+                                                    <lightning-button   class="noBtn3 noBtn2"
+                                                                        variant="brand"
+                                                                        name="confirm"
+                                                                        label="Salvar Grupo Garantidor"
+                                                                        title='Salvar Grupo Garantidor'
+                                                                        onclick={closeModal} 
+                                                                    >
+                                                    </lightning-button>
+                                            </lightning-layout-item>
+                            
+                                        </lightning-layout>
+                                    </div>
+                                </div>
+                            </div>  
+                                       
+                            <footer class="slds-modal__footer footerCriarGrupo">
+        
+                                <lightning-button variant="Neutral"
+                                                  name="cancel"
+                                                  label='Cancelar'
+                                                  title='Cancelar'
+                                                  onclick={closeModal}
+                                                  class="noBtn" >
+                                </lightning-button>
+        
+                                <lightning-button variant="brand"
+                                                  disabled=""
+                                                  name="confirm"
+                                                  label="Salvar"
+                                                  title='Salvar'
+                                                  onclick={closeModal} 
+                                                  class="noBtn3"
+                                                  >
+                                </lightning-button>
+        
+                            </footer>
+                        </div>
+        
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </lightning-card>
+        
+        </template>
+    
+</template>

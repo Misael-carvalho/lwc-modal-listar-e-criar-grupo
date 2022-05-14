@@ -1,0 +1,198 @@
+/* 
+    Criar Grupo
+*/
+
+/* Header */
+
+.headerCriarGrupo {
+    border-bottom: none; 
+    padding:8px 0 0 0;
+}
+.headerCriarGrupo .Titulo {
+    background-color:#F3F2F2; 
+    text-align: left; 
+    border-radius: 10px 10px 0 0; 
+    box-shadow: 0 -1px 0 0 #DDDBDA; 
+    margin-top:5px;
+}
+.headerCriarGrupo .Titulo .iconTitulo {
+    padding: 2px 0 0 12px;
+}
+.headerCriarGrupo .Titulo .blocoTextoTitulo {
+    padding-left: 8px; 
+    padding-top:10px;
+}
+.headerCriarGrupo .Titulo .textoTitulo {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* main */
+
+.main {
+    padding: 15px 20px 3px; 
+    background-color:rgb(254, 254, 254)
+}
+.main .mainBody {
+    padding:0px 10px 10px 10px; 
+    border: 1px #DDDBDA solid; 
+    border-radius: 4px; 
+    box-shadow:0px 2px 2px 0px  rgba(0, 0, 0, 0.1);
+}
+.main .mainBody .inputNomeGrupo {
+    margin-right: 8px;
+    padding-bottom: 0px; 
+    padding-top: 0px;
+}
+.main .mainBody .buttonAddGrupo {
+    color: #706E6B;              
+    font-weight:900;
+    font-size: 20px;
+    text-align: Center;
+    font-family: Segoe UI;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.main .mainBody .addGrupo {
+    margin-left: 0;
+    padding:0;
+}
+.main .mainBody .comboboxAvalista {
+    margin-right: 8px;
+}
+.main .mainBody .textoQuantOper {
+    padding-bottom: 0px; 
+    padding-right:0; 
+    margin-right:1px; 
+    font-size:12px;
+}
+.main .mainBody .valorQuantOper {
+    margin-left: 0; 
+    margin-top:-25px; 
+    padding-bottom: 0px;
+}
+.main .mainBody .valorQuantOper .textoValorQuantOper {
+    width:70%;
+}
+.main .mainBody .containerDatatable {
+    margin-bottom:18px
+}
+.main .mainBody .tituloGrupo{
+    color: #080707;
+    font-family:'Segoe UI';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 0;
+}
+.main .mainBody .containerDatatable .datable{
+    padding-top: 0; 
+}
+.main .mainBody .cancelarGrupoGarantidor {
+    padding-top:0; 
+    padding-bottom:0; 
+    text-align: right; 
+    padding-right: 10px;
+}
+.main .mainBody .salvarGrupoGarantidor {
+    margin-left: 0; 
+    padding-bottom:0;
+}
+.noBtn2 {
+    margin-right:0;
+    font-size:10px;
+}
+.noBtn3 {
+    --sds-c-button-text-color:#FFFFFF;
+    --sds-c-button-text-color-hover:#FFFFFF;
+    --sds-c-button-brand-color-background: #000000;
+    --sds-c-button-brand-color-background-hover: #000000;
+    --sds-c-button-brand-color-border:black;
+    --sds-c-button-brand-color-border-hover:black;
+}
+
+
+/* footer */
+.footerCriarGrupo {
+    border-top-style: none; 
+    background-color:rgb(254, 254, 254);
+}
+.noBtn{
+    margin-right: 2%;
+    --sds-c-button-text-color:black;
+    --sds-c-button-text-color-hover:black;
+    --sds-c-button-neutral-color-border:black;
+    --sds-c-button-neutral-color-border-hover:black;
+}
+
+
+
+
+/* 
+    Listar Grupo Criados
+*/
+
+/* main */
+.listaGrupo {
+    padding: 15px 20px 3px; 
+    background-color:rgb(254, 254, 254);
+}
+
+.listaGrupo .listaGrupoBody {
+    padding:0px 10px 10px 10px; 
+    border: 1px #DDDBDA solid; 
+    border-radius: 4px; 
+    box-shadow:0px 2px 2px 0px  rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.listaGrupo .TitulolistaGrupo {
+    padding-bottom: 0;
+}
+.listaGrupo .TitulolistaGrupo .textoTitulolistaGrupo {
+    font-family: Segoe UI;
+    font-weight:700;
+    font-size: 12px;
+    line-height: 21px;
+}
+.listaGrupo .descricaoGrupoGarantidorC1 p {
+    color: #3E3E3C;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+}
+.listaGrupo .descricaoGrupoGarantidorC2 p {
+    color: #080707;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+.listaGrupo .listaGrupoAcoes {
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center;
+}
+.listaGrupo .listaGrupoAcoes input {
+    width:16px; 
+    margin-right:9px;
+}
+
+/* footerListaGrupo */
+
+.footerListaGrupo {
+    border-top-style: none; 
+    background-color:rgb(254, 254, 254);
+    padding-right: 0;
+}
+.footerListaGrupo .buttonNovoGrupoGarantidor {
+    text-align: left;
+}
+.footerListaGrupo .button {
+    padding-right:0;
+}
